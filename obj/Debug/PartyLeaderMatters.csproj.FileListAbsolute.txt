@@ -1,0 +1,7 @@
+D:\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\PartyLeaderMatters\bin\Win64_Shipping_Client\PartyLeaderMatters.dll
+D:\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\PartyLeaderMatters\bin\Win64_Shipping_Client\PartyLeaderMatters.pdb
+C:\dev\BannerlordMods\PartyLeaderMatters\obj\Debug\PartyLeaderMatters.csprojAssemblyReference.cache
+C:\dev\BannerlordMods\PartyLeaderMatters\obj\Debug\PartyLeaderMatters.csproj.CoreCompileInputs.cache
+C:\dev\BannerlordMods\PartyLeaderMatters\obj\Debug\PartyLeaderMatters.csproj.CopyComplete
+C:\dev\BannerlordMods\PartyLeaderMatters\obj\Debug\PartyLeaderMatters.dll
+C:\dev\BannerlordMods\PartyLeaderMatters\obj\Debug\PartyLeaderMatters.pdb
