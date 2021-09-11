@@ -17,19 +17,19 @@ namespace PartyLeaderRoleXP.Patches
                 if (xpAmount > 0  && __instance.PartyBelongedTo != null && !__instance.IsPartyLeader)
                 {
                     MobileParty party = __instance.PartyBelongedTo;
-                    if (party.EffectiveScout == __instance && skill.Name.ToString() == "Scouting"
-                        || party.EffectiveEngineer == __instance && skill.Name.ToString() == "Engineering"
-                        || party.EffectiveSurgeon == __instance && skill.Name.ToString() == "Medicine"
-                        || party.EffectiveQuartermaster == __instance && skill.Name.ToString() == "Steward")
+                    if (party.EffectiveScout == __instance && skill.Name.ToString() == "Scouting" && Config.LeaderGainsScoutingXP
+                        || party.EffectiveEngineer == __instance && skill.Name.ToString() == "Engineering" && Config.LeaderGainsEngineeringXP
+                        || party.EffectiveSurgeon == __instance && skill.Name.ToString() == "Medicine" && Config.LeaderGainsMedicineXP
+                        || party.EffectiveQuartermaster == __instance && skill.Name.ToString() == "Steward" && Config.LeaderGainsStewardXP)
                     {
                         if (hdFieldInfo == null) GetFieldInfo();
                         Hero partyLeader = party.LeaderHero ?? null;
                         if (partyLeader != null)
                         {
                             HeroDeveloper plhd = (HeroDeveloper)hdFieldInfo.GetValue(partyLeader);
-                            float newXpAmount = (float)(xpAmount * 0.25); //(int)Math.Ceiling(xpAmount * 0.5);
+                            float newXpAmount = (float)(xpAmount * Config.XPPercentage);
                             plhd.AddSkillXp(skill, newXpAmount, true, true);
-                            //InformationManager.DisplayMessage(new InformationMessage($"{skill.Name} Role xp: {xpAmount} Leader xp: {newXpAmount}", TaleWorlds.Library.Color.Black));
+                            //InformationManager.DisplayMessage(new InformationMessage($"{skill.Name} Role xp: {xpAmount} Leader xp: {newXpAmount}. Percentage: {Config.XPPercentage}", TaleWorlds.Library.Color.Black));
                         }
                     }
                 }
